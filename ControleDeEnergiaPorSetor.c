@@ -17,8 +17,8 @@
 
 
 // Credenciais WIFI - Coloque as credencias da sua Rede
-#define WIFI_SSID "LEONARDO"
-#define WIFI_PASSWORD "00695470PI"
+#define WIFI_SSID " "
+#define WIFI_PASSWORD " "
 
 
 // Variáveis para conexão i2c e do display oled
