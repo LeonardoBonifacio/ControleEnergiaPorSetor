@@ -55,7 +55,7 @@ void configure_buzzer(int pin) {
 
 
 // Somente inicializa gpios usadas para os leds e botão(da interrupção)
-void        InicializaGpios(void){
+void InicializaGpios(void){
     gpio_init(BOTAOBOOTSEL);
     gpio_set_dir(BOTAOBOOTSEL, GPIO_IN);
     gpio_pull_up(BOTAOBOOTSEL);
@@ -103,84 +103,98 @@ void user_request(char **request){
         gpio_put(GPIO_LED_SETOR_1,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 1;
-    }
-    else if (strstr(*request, "GET /setor_1_desligado") != NULL && gpio_get(GPIO_LED_SETOR_1) == 1){
+    }else if (strstr(*request, "GET /setor_1_desligado") != NULL && gpio_get(GPIO_LED_SETOR_1) == 1){
         gpio_put(GPIO_LED_SETOR_1,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_2_ligado") != NULL && gpio_get(GPIO_LED_SETOR_2) == 0){
+    }else if (strstr(*request, "GET /setor_2_ligado") != NULL && gpio_get(GPIO_LED_SETOR_2) == 0){
         gpio_put(GPIO_LED_SETOR_2,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 2;
-    }
-    else if (strstr(*request, "GET /setor_2_desligado") != NULL && gpio_get(GPIO_LED_SETOR_2) == 1){
+    }else if (strstr(*request, "GET /setor_2_desligado") != NULL && gpio_get(GPIO_LED_SETOR_2) == 1){
         gpio_put(GPIO_LED_SETOR_2,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_3_ligado") != NULL && gpio_get(GPIO_LED_SETOR_3) == 0){
+    }else if (strstr(*request, "GET /setor_3_ligado") != NULL && gpio_get(GPIO_LED_SETOR_3) == 0){
         gpio_put(GPIO_LED_SETOR_3,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 3;
-    }
-    else if (strstr(*request, "GET /setor_3_desligado") != NULL && gpio_get(GPIO_LED_SETOR_3) == 1){
+    }else if (strstr(*request, "GET /setor_3_desligado") != NULL && gpio_get(GPIO_LED_SETOR_3) == 1){
         gpio_put(GPIO_LED_SETOR_3,false);
         quantidadeSetoresLigados--;
-    }
-    else if(strstr(*request,"GET /setor_4_ligado")!= NULL && gpio_get(GPIO_LED_SETOR_4) == 0){
+    }else if(strstr(*request,"GET /setor_4_ligado")!= NULL && gpio_get(GPIO_LED_SETOR_4) == 0){
         gpio_put(GPIO_LED_SETOR_4,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 4;
-    }
-    else if(strstr(*request,"GET /setor_4_desligado")!= NULL && gpio_get(GPIO_LED_SETOR_4) == 1){
+    }else if(strstr(*request,"GET /setor_4_desligado")!= NULL && gpio_get(GPIO_LED_SETOR_4) == 1){
         gpio_put(GPIO_LED_SETOR_4,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_5_ligado") != NULL && gpio_get(GPIO_LED_SETOR_5) == 0){
+    }else if (strstr(*request, "GET /setor_5_ligado") != NULL && gpio_get(GPIO_LED_SETOR_5) == 0){
         gpio_put(GPIO_LED_SETOR_5,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 5;
-    }
-    else if (strstr(*request, "GET /setor_5_desligado") != NULL && gpio_get(GPIO_LED_SETOR_5) == 1){
+    }else if (strstr(*request, "GET /setor_5_desligado") != NULL && gpio_get(GPIO_LED_SETOR_5) == 1){
         gpio_put(GPIO_LED_SETOR_5,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_6_ligado") != NULL && gpio_get(GPIO_LED_SETOR_6) == 0){
+    }else if (strstr(*request, "GET /setor_6_ligado") != NULL && gpio_get(GPIO_LED_SETOR_6) == 0){
         gpio_put(GPIO_LED_SETOR_6,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 6;
-    }
-    else if (strstr(*request, "GET /setor_6_desligado") != NULL && gpio_get(GPIO_LED_SETOR_6) == 1){
+    }else if (strstr(*request, "GET /setor_6_desligado") != NULL && gpio_get(GPIO_LED_SETOR_6) == 1){
         gpio_put(GPIO_LED_SETOR_6,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_7_ligado") != NULL && gpio_get(GPIO_LED_SETOR_7) == 0){
+    }else if (strstr(*request, "GET /setor_7_ligado") != NULL && gpio_get(GPIO_LED_SETOR_7) == 0){
         gpio_put(GPIO_LED_SETOR_7,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 7;
-    }
-    else if (strstr(*request, "GET /setor_7_desligado") != NULL && gpio_get(GPIO_LED_SETOR_7) == 1){
+    }else if (strstr(*request, "GET /setor_7_desligado") != NULL && gpio_get(GPIO_LED_SETOR_7) == 1){
         gpio_put(GPIO_LED_SETOR_7,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_8_ligado") != NULL && gpio_get(GPIO_LED_SETOR_8) == 0){
+    }else if (strstr(*request, "GET /setor_8_ligado") != NULL && gpio_get(GPIO_LED_SETOR_8) == 0){
         gpio_put(GPIO_LED_SETOR_8,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 8;
-    }
-    else if (strstr(*request, "GET /setor_8_desligado") != NULL && gpio_get(GPIO_LED_SETOR_8) == 1){
+    }else if (strstr(*request, "GET /setor_8_desligado") != NULL && gpio_get(GPIO_LED_SETOR_8) == 1){
         gpio_put(GPIO_LED_SETOR_8,false);
         quantidadeSetoresLigados--;
-    }
-    else if (strstr(*request, "GET /setor_9_ligado") != NULL && gpio_get(GPIO_LED_SETOR_9) == 0){
+    }else if (strstr(*request, "GET /setor_9_ligado") != NULL && gpio_get(GPIO_LED_SETOR_9) == 0){
         gpio_put(GPIO_LED_SETOR_9,true);
         quantidadeSetoresLigados++;
         ultimoSetorLigado = 9;
-    }
-    else if (strstr(*request, "GET /setor_9_desligado") != NULL && gpio_get(GPIO_LED_SETOR_9) == 1){
+    }else if (strstr(*request, "GET /setor_9_desligado") != NULL && gpio_get(GPIO_LED_SETOR_9) == 1){
         gpio_put(GPIO_LED_SETOR_9,false);
         quantidadeSetoresLigados--;
+    }else if (strstr(*request, "GET /todos_desligado")){
+        for (int i = 0; i < 9; i++){
+            gpio_put(gpios_setores[i],0);
+            quantidadeSetoresLigados = 0;
+            ultimoSetorLigado = 0;
+        }
+    }else if (strstr(*request, "GET /ligar_primeiros_3")){
+        if (gpio_get(gpios_setores[0]) && gpio_get(gpios_setores[1]) && gpios_setores[2]){
+            return; // Caso ja estejam as 3 ligadas a lógica é pulada
+        }else{
+            for (int i = 0; i < 3; i++)gpio_put(gpios_setores[i],1);
+            quantidadeSetoresLigados += 3;
+            ultimoSetorLigado = 3;
+        }
+        
+    }else if (strstr(*request, "GET /ligar_meio_3")){
+        if (gpio_get(gpios_setores[3]) && gpio_get(gpios_setores[4]) && gpio_get(gpios_setores[5])){
+            return; //  Caso ja estejam as 3 ligadas a lógica é pulada
+        }else{
+            for (int i = 3; i < 6; i++)gpio_put(gpios_setores[i],1);
+            quantidadeSetoresLigados += 3;
+            ultimoSetorLigado = 6;
+        }
+    }else if (strstr(*request, "GET /ligar_ultimos_3")){
+        if (gpio_get(gpios_setores[6]) && gpio_get(gpios_setores[7]) && gpio_get(gpios_setores[8])){
+            return; // Caso ja estejam as 3 ligadas a lógica é pulada
+        }else{
+            for (int i = 6; i < 9; i++)gpio_put(gpios_setores[i],1);
+            quantidadeSetoresLigados += 3;
+            ultimoSetorLigado = 9;
+        }
     }
-    
+
 };
 
 
@@ -204,11 +218,11 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
     
 
     // Cria a resposta HTML com menos espaço ocupado
-    char *html = (char *)malloc(2600);  // Menor alocação necessária
+    char *html = (char *)malloc(3500);  // Menor alocação necessária
     if (!html) return ERR_MEM;
 
     /// (Dentro do snprintf inicial)
-    snprintf(html, 2600,
+    snprintf(html, 3500,
     "HTTP/1.1 200 OK\r\n"
     "Content-Type: text/html\r\n\r\n"
     "<!DOCTYPE html><html><head>"
@@ -244,12 +258,30 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
         i+1,
         i+1
         );
-        strncat(html, setor, 2600 - strlen(html) - 1);
+        strncat(html, setor, 3500 - strlen(html) - 1);
     }
 
-    // Fecha HTML
-    strncat(html,"</div>" "</body></html>",2600 - strlen(html) - 1
-    );
+
+    // Adicionei as duas novas divs com os forms necessários para os 4 novos botões
+    strncat(html,
+    "</div>" // fecha .grid
+    "<br><div style='margin-top:30px;'>"
+        "<form action='./ligar_primeiros_3' style='display:inline-block;margin:5px;'>"
+            "<button>Ligar Setores 1 a 3</button>"
+        "</form>"
+        "<form action='./ligar_meio_3' style='display:inline-block;margin:5px;'>"
+            "<button>Ligar Setores 4 a 6</button>"
+        "</form>"
+        "<form action='./ligar_ultimos_3' style='display:inline-block;margin:5px;'>"
+            "<button>Ligar Setores 7 a 9</button>"
+        "</form>"
+        "<div style='margin-top:20px;text-align:center;'>"
+            "<form action='./todos_desligado' style='display:inline-block;'>"
+                "<button style='padding:10px 20px;'>Desligar Todos</button>"
+            "</form>"
+        "</div>"
+    "</body></html>",
+    3500 - strlen(html) - 1);
 
 
     // Envia para o cliente
