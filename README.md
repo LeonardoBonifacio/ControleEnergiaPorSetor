@@ -8,6 +8,8 @@ Este projeto implementa um sistema de **controle de energia por setor** em um am
 
 - Interface web responsiva via Wi-Fi para controle remoto dos setores.
 - Controle individual de até **9 setores** com botões Ligar/Desligar.
+- Controle em grupo de 3 em 3 Setores por botões
+- Controle de desligamento de todos os setores por um unico Botão
 - Indicação no display OLED SSD1306 do número de setores ligados e alertas.
 - Alerta visual (LEDs WS2812 + LEDs da BitDogLab) e sonoro (buzzer PWM) ao atingir limites críticos de energia.
 - Interrupção no botão BOOTSEL para entrar em modo BOOTSEL facilmente.
